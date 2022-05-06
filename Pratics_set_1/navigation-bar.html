@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-bar {
+            background-color: rgb(57, 92, 81);
+            font-family: sans-serif;
+            color: white;
+        }
+        
+
+        .nav-bar img {
+            width: 120px;
+            float: left;
+            margin: 20px 24px;
+        }
+
+        ul li {
+            display: inline-block;
+            list-style: none;
+            margin: 16px 17px;
+        }
+
+
+        span {
+            display: none;
+            margin: 15px 0px;
+            cursor: pointer;
+        }
+
+        .menu-right {
+            text-align: right;
+            margin-right: 30px;
+            padding: 12px 12px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            span {
+                display: block;
+            }
+
+            ul li {
+                display: block;
+            }
+
+            ul {
+                display: none;
+            }
+        }
+        .list button{
+            padding: 4px 8px;
+            cursor: pointer;
+            background-color: rgb(129, 92, 92);
+            color: white;
+            margin: 3px 6px;
+            font-family: sans-serif;
+            font-size: 14px;
+            border: 1px solid rgb(168, 122, 122);
+            border-radius: 6px;
+        }
+        .list input{
+            padding: 4px 8px;
+            margin-left: 45px;
+            font-size: 14px;
+            font-family: sans-serif;
+            border:  none;
+            border: 1px solid white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav-bar">
+            <img src="./logo image/logo.png" alt="">
+            <div class="menu-right">
+                <span onclick="myFunction()">&#9776;</span>
+                <ul id="menu">
+                    <div class="list">
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Blog's</li>
+                        <input type="text" placeholder="Search"><button>Search</button>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("menu");
+
+            if (x.style.display == "block") {
+                x.style.display = "none";
+            }
+            else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>
